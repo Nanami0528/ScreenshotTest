@@ -23,10 +23,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    private func setup() {
-         // キャプチャ画像を取得 capturedImageのimageにセット.
-        capturedImage.image = getScreenShot() as UIImage
-    }
+   
     
     private func getScreenShot() -> UIImage {
         // キャプチャする範囲を取得.
@@ -50,7 +47,9 @@ class ViewController: UIViewController {
     
     @IBAction func on (){
         
-        setup()
+        // キャプチャ画像を取得 capturedImageのimageにセット.
+        capturedImage.image = getScreenShot() as UIImage
+
         
     }
 
