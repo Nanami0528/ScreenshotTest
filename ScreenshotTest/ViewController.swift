@@ -12,14 +12,10 @@ class ViewController: UIViewController {
     
     @IBOutlet var screenShot: UIImage!
     @IBOutlet var capturedImage : UIImageView!
+    @IBOutlet var setview: UIView!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
         
-        super.viewDidLoad()
-      //  setup()
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +31,9 @@ class ViewController: UIViewController {
     private func getScreenShot() -> UIImage {
         // キャプチャする範囲を取得.
         //let rect = self.view.bounds
-        let rect = CGRect(x: 10, y: 10, width: 10, height: 10)
+        //let rect = CGRect(x: 10, y: 10, width: 50, height: 10)
+        let rect = setview.frame
+
         
         // ビットマップ画像のcontextを作成.
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
