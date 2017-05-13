@@ -34,7 +34,9 @@ class ViewController: UIViewController {
     
     private func getScreenShot() -> UIImage {
         // キャプチャする範囲を取得.
-        let rect = self.view.bounds
+        //let rect = self.view.bounds
+        let rect = CGRect(x: 10, y: 10, width: 10, height: 10)
+        
         // ビットマップ画像のcontextを作成.
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
         let context: CGContext = UIGraphicsGetCurrentContext()!
